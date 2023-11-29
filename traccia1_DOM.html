@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        p{width: 400px; height: 300px; border: 3px solid black; border-radius: 20px; display: flex; justify-content: center; align-items: center; text-align: center; padding: 10px;}
+        button{width: 100px; height: 50px;}
+        .CarattereGrassetto{font-weight: bold;}
+    </style>
+</head>
+<body>
+    <div style="display: flex; justify-content: space-around;">
+        <p id="par1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet ab optio qui! Quod, vitae fugit?</p>
+        <p id="par2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores numquam iusto architecto, dicta deleniti, temporibus officia magnam autem fugiat iste tempora blanditiis ad perspiciatis ipsa expedita eaque? Unde officiis enim nulla iusto ex impedit vero!</p>
+        <p id="par3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat inventore laboriosam non voluptas itaque, dolor quibusdam nam aliquid, dolorum minima fuga? Dolorum, molestias.</p>
+    </div>
+    
+    <div style="display: flex; justify-content: space-around;">
+        <button onclick="cambiaColori()">Cambia colore</button>
+        <button onclick="modificaCaratteri()">Grassetto</button>
+        <button onclick="DysplayONOFF()">Visibilità</button>
+    </div>
+    
+    <script>
+        
+        
+        
+        function cambiaColori(){
+            let randomColor = Math.floor(Math.random()*16777215).toString(16);
+            document.getElementById("par1").style.color = "#" + randomColor;
+            document.getElementById("par2").style.color = "#" + randomColor;
+            document.getElementById("par3").style.color = "#" + randomColor;
+           
+        }
+        
+        function modificaCaratteri(){
+            document.getElementById("par1").classList.add("CarattereGrassetto");
+            document.getElementById("par2").classList.add("CarattereGrassetto");
+            document.getElementById("par3").classList.add("CarattereGrassetto");
+        }
+        
+        function DysplayONOFF(){
+            if(document.getElementById("par1").style.display == 'none') {
+                document.getElementById("par1").style.display = 'block';
+            }
+            else {
+                document.getElementById("par1").style.display = 'none';
+            }
+
+            if(document.getElementById("par2").style.display == 'none') {
+                document.getElementById("par2").style.display = 'block';
+            }
+            else {
+                document.getElementById("par2").style.display = 'none';
+            }
+
+            if(document.getElementById("par3").style.display == 'none') {
+                document.getElementById("par3").style.display = 'block';
+            }
+            else {
+                document.getElementById("par3").style.display = 'none';
+            }
+        }
+        
+        
+        
+    </script>
+    
+</body>
+</html>

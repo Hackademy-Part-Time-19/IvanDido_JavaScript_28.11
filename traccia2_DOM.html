@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div style="display: flex; justify-content: space-around; margin-bottom: 50px;">
+        
+        <div>
+            <label>Titolo</label>
+            <input type="text" id="DatiTitolo">
+        </div>
+        <div>
+            <label>Paragrafo</label>
+            <input type="text" id="DatiParagrafo">
+        </div>
+        
+        <button onclick="InserisciArticolo()">Crea Articolo</button>
+        
+    </div>
+    
+    <div id="ContenitoreArticoli" style="display: flex; justify-content: center;">
+        <div id="SezioneArticolo"> 
+            
+        </div>
+    </div>
+    
+    <script>
+        
+        function InserisciArticolo() {
+           let titolo = document.getElementById("DatiTitolo").value;
+           let paragrafo = document.getElementById("DatiParagrafo").value;
+            document.getElementById("SezioneArticolo").innerHTML += `<div style="background-color: aquamarine; height: 200px; width: 400px; border-radius: 40px; border: solid 2px black; margin-bottom:30px; display: flex; flex-direction: column; justify-content: center; align-content:center; text-align:center;" > <h1>${titolo}</h1> <p>${paragrafo}</p></div>`;
+        }
+        
+    </script>
+    
+</body>
+</html>
